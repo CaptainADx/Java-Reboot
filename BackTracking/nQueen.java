@@ -29,9 +29,9 @@ public class nQueen {
 
     public static void printBoard(char[][] board){
         System.out.println("--------------CHESS BOARD--------------");
-        for(int i=0; i<board.length; i++){
-            for(int j=0; j<board[0].length; j++){
-                System.out.print(board[i][j] + " ");
+        for (char[] board1 : board) {
+            for (int j = 0; j<board[0].length; j++) {
+                System.out.print(board1[j] + " ");
             }
             System.out.println();
         }
@@ -65,6 +65,7 @@ public class nQueen {
             }
             
             nQueens(board, 0);
+            
         }
     }
 }
