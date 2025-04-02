@@ -22,4 +22,3 @@ public class findSubsets {
         findSubsets(s, new StringBuilder(""), i);
     }
 }
-

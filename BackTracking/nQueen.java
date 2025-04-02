@@ -65,7 +65,6 @@ public class nQueen {
             }
             
             nQueens(board, 0);
-            
         }
     }
 }
