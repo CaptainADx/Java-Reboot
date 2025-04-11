@@ -19,7 +19,7 @@ public class LinkedList {
             head = tail = newNode;
             return;
         }
-        newNode.next = head;
+        newNode.next = head;     
 
         head = newNode;
     }
