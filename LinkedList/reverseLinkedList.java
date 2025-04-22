@@ -1,5 +1,4 @@
-public class LinkedList {
-
+public class reverseLinkedList {
     public class Node {
         int data;
         Node next;
@@ -48,21 +47,50 @@ public class LinkedList {
         }
         System.out.println("Null");
     }
+
+    public int linearSearch(int key){
+        Node temp = head;
+        int i = 0;
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
+
+    //Method to reverse the Linked List.
+    public void reverse(){
+        Node prev = null; 
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
     
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.printLinkedList();
+        reverseLinkedList ll = new reverseLinkedList();
+        // ll.printLinkedList();
         ll.addFirst(2);
-        ll.printLinkedList();
+        // ll.printLinkedList();
         ll.addFirst(1);
-        ll.printLinkedList();
+        // ll.printLinkedList();
         ll.addLast(3);
-        ll.printLinkedList();
+        // ll.printLinkedList();
         ll.addLast(4);
         ll.printLinkedList();
         
+        //Reversing the Linked List
+        ll.reverse();
+        ll.printLinkedList();
+
     }
 }
-
-
- 
