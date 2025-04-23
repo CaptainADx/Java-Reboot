@@ -1,5 +1,5 @@
 
-public class detectCycleInLL {
+public class DetectCycleInLL {
     
     public static class Node {
 
