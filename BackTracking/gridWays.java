@@ -18,4 +18,3 @@ public class gridWays {
         System.out.println(gridWay(0, 0, n, m));
     }
 }
-

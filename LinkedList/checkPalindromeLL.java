@@ -65,11 +65,8 @@ public class checkPalindromeLL {
     }
 
     public boolean checkPalindrome(){
-<<<<<<< HEAD:LinkedList/checkPalindromeLL.java
-        if(head == null || head.next == null){   //This case is for the Linked List with 0 element or 1 element
-=======
+
         if(head == null || head.next == null){
->>>>>>> 5aa794d9fe95ab7bf2509a925db3c63a462438c2:checkPalindromeLL.java
             return true;
         }
 

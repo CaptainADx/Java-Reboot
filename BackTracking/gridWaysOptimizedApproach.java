@@ -27,7 +27,7 @@ public class gridWaysOptimizedApproach {
         return ans;
     }
     public static void main(String[] args){
-        int n=10, m=10;
+        int n=10, m=29;
         
         System.out.println(gridWays(n,m));
     }
