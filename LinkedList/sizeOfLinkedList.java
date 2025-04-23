@@ -82,7 +82,7 @@ public class sizeOfLinkedList {
         ll.addLast(5);
         ll.addAtIndex(3, 4);
         ll.printLinkedList();
-        System.out.println("Size of Linked List is --> " + ll.size);
+        System.out.println("Size of Linked List is --> " + size);
     }
     
 }
