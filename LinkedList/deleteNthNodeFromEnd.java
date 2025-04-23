@@ -93,11 +93,12 @@ public class deleteNthNodeFromEnd {
             return;
         }
 
-        int idxToFind = size-idx+1;
+        int idxToFind = size-idx;
         Node prev = head;
         while(i < idxToFind){
-            prev = prev.next;
             i++;
+            prev = prev.next;
+            
         }
         prev.next = prev.next.next;
     }
