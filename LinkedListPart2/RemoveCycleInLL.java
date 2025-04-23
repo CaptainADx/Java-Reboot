@@ -1,5 +1,4 @@
-
-public class DetectCycleInLL {
+public class RemoveCycleInLL {
     public static class Node {
 
         int data;
@@ -111,6 +110,52 @@ public class DetectCycleInLL {
         return false;
     }
 
+    public static void removeCycle(){
+        //Detect Cycle
+        Node slow = head;
+        Node fast = head;
+        boolean cycle = false;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                cycle = true;
+                break;
+            }
+        }
+
+        if(cycle == false){
+            return;
+        }
+
+        //Find the Node from where cycle starts
+        slow = head;
+        Node prev = null;
+
+        //Special case if the cycle starts from head
+        if (slow == fast && fast!=null) {
+            while (fast != slow) {
+                fast = fast.next;
+            }
+            fast.next = null;
+            return;
+        }
+
+        //Continue with the normal logic if cycle starts from anywhere other than head
+        while(slow != fast){
+            prev = fast;
+            slow = slow.next;
+            if(fast != null){       //**** This condition is added if the FAST is already at null then Null.next will not make sense
+                fast = fast.next;
+            }
+        }
+
+        //Remove cycle
+        if (prev != null) {        //**** This condition is added if the PREV is already at null then Null.next will not make sense
+            prev.next = null;
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -119,18 +164,18 @@ public class DetectCycleInLL {
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
         head.next.next.next.next = head.next;
-        //PRINT STATEMENT SHOULD NOT BE USED SINCE CYCLE IS PRESENT IN THE ABOVE LINKED LIST
-        // printLinkedList();           //In this case a cycle in LL is present so it will print infinite times...
-        
-        System.out.println(detectCycle());
+        System.out.println("Cycle Present Or Not --> " + detectCycle());
+        removeCycle();
+        printLinkedList();
 
         head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
         head.next.next.next.next = null;
+        System.out.println("Cycle Present Or Not --> " + detectCycle());
+        removeCycle();
         printLinkedList();
-        
-        System.out.println(detectCycle());
     }
+
 }
