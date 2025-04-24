@@ -1,7 +1,6 @@
 public class checkPalindromeLL {
     
     public class Node {
-
         int data;
         Node next;
 
@@ -124,7 +123,7 @@ public class checkPalindromeLL {
         ll2.addLast(2);
         ll2.addLast(1);
         ll2.printLinkedList();
-        System.out.println("Size of Linked List is -->" + ll2.size);
+        System.out.println("Size of Linked List is --> " + ll2.size);
         
         if(ll2.checkPalindrome() == false){
             System.out.println("Linked List is not a Palindrome");

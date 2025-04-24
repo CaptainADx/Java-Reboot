@@ -1,15 +1,12 @@
-public class RemoveCycleInLL {
-    public static class Node {
-
+public class ZigZagLinkedList {
+    public class Node {
         int data;
         Node next;
-
-        public Node(int data) {
+        public Node(int data){
             this.data = data;
             this.next = null;
         }
     }
-
     public static Node head;
     public static Node tail;
     public static int size;
@@ -157,25 +154,54 @@ public class RemoveCycleInLL {
         }
     }
 
+    public Node zigzagOptimum(Node head){
+        //Find Mid
+        Node midNode = findMid(head);
+
+        //reverse second half
+
+        Node prev = null;
+        Node curr = midNode.next;
+        midNode.next = null;
+        Node next;
+
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        Node left = head;
+        Node right = prev;
+
+        //Arrange in alternate fashion
+        Node nextLeft, nextRight;
+
+        while(left!= null && right != null){
+            nextLeft = left.next;
+            left.next = right;
+
+            nextRight = right.next;
+            right.next = nextLeft;
+
+            left = nextLeft;
+            right = nextRight;
+        }
+        return head;
+    }
 
     public static void main(String[] args) {
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = head.next;
-        System.out.println("Cycle Present Or Not --> " + detectCycle());
-        removeCycle();
-        printLinkedList();
+        ZigZagLinkedList ll = new ZigZagLinkedList();
+        ll.addFirst(1);
+        ll.addLast(2);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
 
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = null;
-        System.out.println("Cycle Present Or Not --> " + detectCycle());
-        removeCycle();
+        printLinkedList();
+        ll.zigzagOptimum(head);
         printLinkedList();
     }
+
 
 }
