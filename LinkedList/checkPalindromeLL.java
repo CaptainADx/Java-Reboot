@@ -120,8 +120,7 @@ public class checkPalindromeLL {
         System.out.println();
         checkPalindromeLL ll2 = new checkPalindromeLL();
         ll2.addFirst(1);
-        ll2.addLast(2);
-        ll2.addLast(3);
+        ll2.addLast(1);
         ll2.addLast(2);
         ll2.addLast(1);
         ll2.printLinkedList();
