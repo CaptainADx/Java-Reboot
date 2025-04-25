@@ -177,7 +177,7 @@ public class ZigZagLinkedList {
         //Arrange in alternate fashion
         Node nextLeft, nextRight;
 
-        while(left!= null && right != null){
+        while(left != null && right != null){
             nextLeft = left.next;
             left.next = right;
 
