@@ -1,1 +1,1 @@
-git rm -r -f --cached -- '*.class'
+git rm -r -f --cached -- '*.class'co
