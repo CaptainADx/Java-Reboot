@@ -48,7 +48,6 @@ public class reverseStringUsingStack {
 
 
     public static void main(String[] args) {
-        
         String s = "Abhijeet";
         
         System.out.println(reverseString(s));
