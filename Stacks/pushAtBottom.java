@@ -1,14 +1,13 @@
 import java.util.Stack;
 
 public class pushAtBottom {
-
-    public static void pushAtBottom(Stack<Integer> stack, int data){
+    public static void pushAtBottomOfStack(Stack<Integer> stack, int data){
         if(stack.isEmpty()){
             stack.push(data);
             return;
         }
         int top = stack.pop();
-        pushAtBottom(stack, data);
+        pushAtBottomOfStack(stack, data);
         stack.push(top);
     }
     
@@ -18,7 +17,7 @@ public class pushAtBottom {
         s.push(2);
         s.push(3);
 
-        pushAtBottom(s, 4);
+        pushAtBottomOfStack(s, 4);
 
         while(!s.isEmpty()){
             System.out.println(s.pop());
