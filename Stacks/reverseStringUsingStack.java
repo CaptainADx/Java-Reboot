@@ -30,22 +30,27 @@ public class reverseStringUsingStack {
         }
     }
 
-
-
-    public static void main(String[] args) {
+    public static String reverseString(String s){
         CustomStack stack = new CustomStack();
-        String s = "Abhijeet";
         int i = 0;
         while(i < s.length()){
             stack.push(s.charAt(i));
             i++;
         }
+
         StringBuilder sb = new StringBuilder();
 
         while(!stack.isEmpty()){
             sb.append(stack.pop());
         }
+        return sb.toString();
+    }
 
-        System.out.println(sb);
+
+    public static void main(String[] args) {
+        
+        String s = "Abhijeet";
+        
+        System.out.println(reverseString(s));
     }
 }
