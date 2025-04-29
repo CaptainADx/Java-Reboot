@@ -10,7 +10,6 @@ public class ReverseStack {
         int top = stack.pop();
         pushAtBottom(stack, data);
         stack.push(top);
-        
     }
 
     public static void reverse(Stack<Integer> stack){
