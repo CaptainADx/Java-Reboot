@@ -1,6 +1,6 @@
 public class MultiThreadingSample {
     
-    public static class VideoStreaming extends Thread {
+    public static class VideoStreaming implements Runnable {
         @Override
         public void run(){
             System.out.println("Video Streaming started");
@@ -9,7 +9,7 @@ public class MultiThreadingSample {
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
-                    System.err.println(e);
+                    System.err.println("VideoStreaming Interrupted: " + e.getMessage());
                 }
             }
             System.out.println("Video Streaming Completed");
@@ -25,13 +25,13 @@ public class MultiThreadingSample {
                     System.out.println("Downloading " + i + "%");
                     Thread.sleep(1500);
                 } catch (InterruptedException ex) {
-                    System.err.println(ex);
+                    System.err.println("VideoStreaming Interrupted: " + ex.getMessage());
                 }
             }
             System.out.println("Downloading Completed");
         }
     }
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
         VideoStreaming vs = new VideoStreaming();
         Downloading dw = new Downloading();
 
