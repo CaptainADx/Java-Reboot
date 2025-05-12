@@ -13,7 +13,7 @@ public class CircularQueueUsingArray {
         }
 
         public boolean isEmpty(){
-            return rear==-1 && front==-1;
+            return (rear==-1 && front==-1);
         }
 
         public boolean isFull(){

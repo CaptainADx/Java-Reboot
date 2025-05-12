@@ -4,7 +4,7 @@ public class LinkedListAddAtIndex {
         int data;
         Node next;
 
-        public Node(int data){
+        Node(int data){
             this.data = data;
             this.next = null;
         }
