@@ -23,11 +23,10 @@ public class AllDivisorsOfNumber {
         //it starts from i-1 coz last loop exits at the false condition which is caused by
         //post increment i++.
         for( i=i-1 ; i>=1 ; i--){
-            if(num%i == 0 ){
+            if(num%i == 0){
                 System.out.println(num/i);
             }
         }
-
     }
     public static void main(String[] args) {
         // findAllDivisorsEfficient(20);
