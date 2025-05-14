@@ -1,5 +1,5 @@
 public class CalculatingPower {
-    public static long pow(long x, long n){
+    public long pow(long x, long n){
         long res = 1;
         while(n>0){
             if((n&1) == 1){
@@ -12,6 +12,6 @@ public class CalculatingPower {
     }
 
     public static void main(String[] args){
-        System.out.println(pow(3, 5));
+        System.out.println(new CalculatingPower().pow(3, 5));
     }
 }
