@@ -20,6 +20,8 @@ public class CountTotalNumberOfDivisors {
     }
 
     /* 
+    * NOTE: THIS IS THE LOGIC TO FILTER OUT THE NUMBERS WITH EXACTLY 3 DIVISORS....
+
      * This could also be optimized by using the logic:
      * A number will have exactly 3 divisors if and only if its a sqare of a prime number
      * Given below is the most optimized approach...
@@ -41,7 +43,7 @@ public class CountTotalNumberOfDivisors {
             return count;
         }
 
-    * This code have time complexity of  O(√N × √√N) and Space complexity of O(1);
+      This code have time complexity of  O(√N × √√N) and Space complexity of O(1);
     */
 
 }

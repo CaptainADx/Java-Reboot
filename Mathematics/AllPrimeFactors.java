@@ -26,7 +26,7 @@ public class AllPrimeFactors {
         }
     }
     public static void main(String[] args) {
-        long num = 37837295792834835L;
+        long num = 37837295792834832L;
         printAllPrimeFactors(num);
     }
 }
