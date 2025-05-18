@@ -20,7 +20,6 @@ public class removeDuplicates {
             }
         }
     }
-
     public static void main(String[] args){
         String str = "abhijeet dutta";
         StringBuilder sb = new StringBuilder("");
