@@ -12,7 +12,7 @@ public class RopeCuttingProblem {
             return -1;
         }
 
-        int res = 0;
+        int res;
         int choice1 = ropeCuttingSolution(n-a, a, b, c);
         int choice2 = ropeCuttingSolution(n-b, a, b, c);
         int choice3 = ropeCuttingSolution(n-c, a, b, c);
