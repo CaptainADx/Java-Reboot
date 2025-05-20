@@ -25,5 +25,4 @@ public class removeDuplicates {
         StringBuilder sb = new StringBuilder("");
         removeDup(str, 0, sb, new boolean[26]);
     }
-
 }
