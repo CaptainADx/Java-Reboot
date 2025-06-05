@@ -1,18 +1,19 @@
 public class MultiThreadingSample {
     
     public static class VideoStreaming implements Runnable {
+        
         @Override
         public void run(){
-            System.out.println("Video Streaming started");
-            for (int i = 0; i < 10; i++) {
-                System.out.println("Streaming ... ");
-                try {
+            System.out.println("Video Streaming Started");
+            for(int i = 0; i < 10; i++){
+                System.out.println("Streaming...");
+                try{
                     Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    System.err.println("VideoStreaming Interrupted: " + e.getMessage());
+                } catch(InterruptedException e){
+                    System.err.println("Video Streaming Interrupted: " + e.getMessage());
                 }
             }
-            System.out.println("Video Streaming Completed");
+            System.out.println("Video Streaming Stopped");
         }
     }
 
