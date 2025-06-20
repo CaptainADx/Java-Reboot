@@ -6,14 +6,13 @@ public class ENums {
         private TrafficSignal(String action){
             this.action = action;
         }
-
         public String getAction(){
             return action;
         }
     }
 
     public static void main(String[] args) {
-        TrafficSignal s = TrafficSignal.RED;
+        TrafficSignal s = TrafficSignal.YELLOW;
         System.out.println(s + " : " + s.getAction());
     }
 }

@@ -9,7 +9,7 @@ public class StockSpanProblem {
 
         for(int i=1; i<stock.length; i++){
             int currPrice = stock[i];
-            while(!stack.isEmpty() && currPrice > stock[stack.peek()]){
+            while(!stack.isEmpty() && currPrice >= stock[stack.peek()]){
                 stack.pop();
             }
             if(stack.isEmpty()){
