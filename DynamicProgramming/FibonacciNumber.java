@@ -6,7 +6,7 @@ public class FibonacciNumber {
         if(n==0 || n==1){
             return n;
         }
-
+        
         if(dp[n] != -1){
             return dp[n];
         }
@@ -16,18 +16,26 @@ public class FibonacciNumber {
 
     //BY ITERATIVE TECHNIQUE
     public static int calculateFiboTopDownApproach(int n){
-        int[] dp = new int[n+1];
-        dp[0] = 0;
-        dp[1] = 1;
+        if (n == 0) return 0;
+    if (n == 1) return 1;
 
-        for(int i=2; i<=n; i++){
-            dp[i] = dp[i-1] + dp[i-2];
-        }
-        return dp[n];
+    int[] dp = new int[n + 1];
+    dp[0] = 0;
+    dp[1] = 1;
+    System.out.print(dp[0] + " ");
+    System.out.print(dp[1] + " ");
+
+    for (int i = 2; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
+        System.out.print(dp[i] + " ");
+    }
+
+    System.out.println();
+    return dp[n];
     }
 
     public static void main(String[] args){
-        int n = 10;
+        int n = 4;
         int[] dp = new int[n+1];
         Arrays.fill(dp, -1);
 
