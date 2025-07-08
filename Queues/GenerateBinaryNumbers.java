@@ -15,7 +15,6 @@ public class GenerateBinaryNumbers {
             queue.offer(current + "0");
             queue.offer(current + "1");
         }
-
         return arr;
     }  
     
