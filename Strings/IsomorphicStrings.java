@@ -19,9 +19,9 @@ public class IsomorphicStrings {
                 st.put(cs, ct);
             }
             if(ts.containsKey(ct)){
-                if(st.get(ct) != cs) return false;
+                if(ts.get(ct) != cs) return false;
             } else{
-                st.put(ct, cs);
+                ts.put(ct, cs);
             }
 
         }

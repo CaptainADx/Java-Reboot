@@ -35,7 +35,6 @@ public class FractionalKnapsack {
             } else {
                 totalProfit += fraction[i][1] * spaceAvailable;
                 items.add("I"+ (int)fraction[i][0] + " in Quantity " + spaceAvailable);
-                spaceAvailable = 0;
                 break;
             }
         }
