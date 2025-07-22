@@ -40,7 +40,7 @@ class FindLowerBound{
 
         int[] arr ={1, 2, 3, 3, 5, 8, 8, 10, 10, 11};
         int X = 9;
-        // int LB = findLowerBoundOfX(arr, 0, arr.length-1, X, arr.length); //Recursive Approach
+        int LB = findLowerBoundOfX(arr, 0, arr.length-1, X, arr.length); //Recursive Approach
         // int LB = findLowerBoundOfXIteractive(arr, X); //Iterative Approach
         System.out.println("Lower Bound of " + X + " is --> " + LB);
     }
