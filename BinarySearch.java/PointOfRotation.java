@@ -13,29 +13,40 @@ public class PointOfRotation {
     }
 
     
-    public static int findPointOfRotationIteative(int[] arr, int si, int ei){
-        // If the array is not rotated at all
-        if (arr[si] <= arr[ei]) {
-            return 0;
-        }
+    public static int findPointOfRotationIteative(int[] nums, int si, int ei){
+        
+        int low = 0, high = nums.length-1;
+        int ans = Integer.MAX_VALUE;
 
-        while (si <= ei) {
-            int mid = si + (ei - si) / 2;
+        while(low <= high){
+            int mid = low + (high-low)/2;
 
-            // Check if mid is the rotation point
-            if (mid > 0 && arr[mid] < arr[mid - 1]) {
-                return mid;
+            //If Mid is point to the exact point of Rotation
+            if(mid > 0 && nums[mid] < nums[mid-1]){
+                return nums[mid];
             }
 
-            // Decide the direction to move
-            if (arr[mid] >= arr[si]) {
-                si = mid + 1;  // Rotation point is in right half
-            } else {
-                ei = mid - 1;  // Rotation point is in left half
+            // If Array is already sorted... 
+            // This case also happens when low crosses or point to the "Point of Rotation"
+            if(nums[low] <= nums[high]){
+                return Math.min(ans, nums[low]);
+            }
+
+            //If Left-Half is sorted
+            if(nums[mid] >= nums[low]){
+                ans = Math.min(ans, nums[low]);
+                low = mid+1;
+            } 
+            //If right-Half is sorted
+            else{
+                ans = Math.min(ans, nums[mid]);
+                high = mid-1;
             }
         }
 
-        return 0;  // Fallback (shouldn't happen for valid rotated arrays)
+        //Return Answer in the end
+        return ans;
+
     }
     public static void main(String[] args) {
         int[] arr = {4,5,1,2,3};
