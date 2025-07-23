@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SubseSum_I {
+public class SubsetSum_I {
     
     public static void findSubsetSum(int[] arr, int idx, int sum, List<Integer> res){
         if(idx == arr.length){
