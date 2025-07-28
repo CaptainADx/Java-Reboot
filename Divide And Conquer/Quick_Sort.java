@@ -6,7 +6,7 @@ public class Quick_Sort {
     }
 
     public static void quickSort(int[] arr, int si, int ei) {
-        if (si >= ei) {
+        if (si >= ei) { 
             return;
         }
         int pIdx = partition(arr, si, ei);
