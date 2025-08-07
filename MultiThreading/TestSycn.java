@@ -5,15 +5,23 @@ public class TestSycn{
 
         Brackets b = new Brackets();
         Thread t1 = new Thread(() -> {
+            long start = System.currentTimeMillis();
             for (int i = 0; i < 5; i++) {
                 b.printBrackets('{', '}');
             }
+            long end = System.currentTimeMillis();
+
+            System.out.println("T1 exe time -> " + (end-start));
         });
 
         Thread t2 = new Thread(() -> {
+                long start = System.currentTimeMillis();
                 for (int i = 0; i < 5; i++) {
                     b.printBrackets('[', ']');
                 }
+                long end = System.currentTimeMillis();
+
+                System.out.println("T2 exe time -> "+ (end-start));
             }
         );
 
