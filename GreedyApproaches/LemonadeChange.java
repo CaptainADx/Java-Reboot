@@ -15,8 +15,10 @@ public class LemonadeChange {
         for(int i=0; i<bills.length; i++){
             switch (bills[i]) {
 
-                case 5 -> five++;
-
+                case 5 -> {
+                    five++;
+                }
+                
                 case 10 -> {
                     if(five >= 1){
                         five--;
