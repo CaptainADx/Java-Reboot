@@ -24,7 +24,7 @@ public class N_MeetingsInOneRoom {
 
         for (int i = 1; i < meetings.length; i++) {
             if (meetings[i][1] >= lastEndTime) {
-                lastEndTime = meetings[i][2];
+                lastEndTime = meetings[i][2]; 
                 arr[trackArr++] = meetings[i][0];
             }
         }
@@ -37,7 +37,6 @@ public class N_MeetingsInOneRoom {
     public static void main(String[] args) {
         int[] start = {0, 3, 1, 5, 5, 8};
         int[] end = {5, 4, 2, 9, 7, 9};
-
 
         findMeetingSequence(start, end);
         
