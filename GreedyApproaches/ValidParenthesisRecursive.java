@@ -1,4 +1,4 @@
-public class ValidParenthesis {
+public class ValidParenthesisRecursive {
     
     public static boolean check(String s, int idx, int count){
         if(count == -1){
