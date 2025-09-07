@@ -11,7 +11,7 @@ public class Consumer extends Thread{
     public void run(){
         while (true) { 
             try{
-                int item = shm.consume();
+                // int item = shm.consume();
             
                 Thread.sleep(1000);
             } 
