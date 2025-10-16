@@ -81,14 +81,14 @@ public class BoundaryTraversalAnticlockWise {
 
     
     public static void main(String[] args) {
-            int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
-            BinaryTree tree = new BinaryTree();
-            TreeNode root = tree.buildTree(nodes);
-            System.out.println(root.data);  //Print root.data to see the data at memory location
+        int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+        BinaryTree tree = new BinaryTree();
+        TreeNode root = tree.buildTree(nodes);
+        System.out.println(root.data);  //Print root.data to see the data at memory location
 
-            BoundaryTraversalAnticlockWise btac = new BoundaryTraversalAnticlockWise();
+        BoundaryTraversalAnticlockWise btac = new BoundaryTraversalAnticlockWise();
 
 
-            System.out.println(btac.printBoundary(root));
-        }
+        System.out.println(btac.printBoundary(root));
+    }
 }
