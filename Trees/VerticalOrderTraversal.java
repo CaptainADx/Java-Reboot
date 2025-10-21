@@ -1,4 +1,8 @@
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.TreeMap;
 
 public class VerticalOrderTraversal {
 
@@ -31,7 +35,7 @@ public class VerticalOrderTraversal {
         //The format is like TreeMap<Vertical Column, TreeMap<Level, PriorityQueue<Data Values>>>
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
 
-        Queue<Tuple> q = new LinkedList<Tuple>();
+        Queue<Tuple> q = new LinkedList<>();
         q.offer(new Tuple(root, 0, 0));
 
         while(!q.isEmpty()){
