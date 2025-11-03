@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class LCA_1 {
+
     
     public static class TreeNode{
         int data;
@@ -13,6 +14,7 @@ public class LCA_1 {
             this.right = null;
         }
     }
+
 
     static class BinaryTree{
         int idx = -1;
@@ -30,6 +32,7 @@ public class LCA_1 {
             return newNode;
         }
     }
+
 
     public static boolean getPath(TreeNode node, int k, ArrayList<TreeNode> pathOfK){
         if(node == null){
@@ -53,6 +56,7 @@ public class LCA_1 {
         
         return false;
     }
+
 
     public static int lowestCommonAncestor(TreeNode root, int a, int b){
         ArrayList<TreeNode> pathOfA = new ArrayList<>();
@@ -78,7 +82,6 @@ public class LCA_1 {
 
         return pathOfA.get(i-1).data;
     }
-
 
 
     public static void main(String[] args) {
