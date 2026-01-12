@@ -10,6 +10,7 @@ public class StackUsingLinkedList {
 
     public static class Stack{
         public static Node head = null;
+        
         //Is empty function
         public boolean isEmpty(){
             return head == null;
