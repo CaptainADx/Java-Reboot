@@ -28,7 +28,6 @@ public class KokoEatingBananas {
             totalHours += (long) Math.ceil((double)pile / (double)k);
         }
         return totalHours <= h;
-
     }
     
     public static void main(String[] args) {

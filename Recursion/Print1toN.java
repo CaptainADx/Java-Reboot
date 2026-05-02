@@ -4,7 +4,7 @@ public class Print1toN {
             return;
         }
         printNumbers(number-1);
-        System.out.print(number + " ");
+        System.out.println(number);
     }
     public static void main(String[] args) {
         int n = 10;

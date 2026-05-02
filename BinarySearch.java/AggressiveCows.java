@@ -18,7 +18,7 @@ class AggressiveCows{
             } else{
                 high = mid-1;
             }
-        }
+        } 
         return ans;
     }
 

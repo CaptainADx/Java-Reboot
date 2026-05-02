@@ -110,7 +110,6 @@ class MaximumSumOfNonAdjacent{
 
     }
 
-
     public static void main(String[] args) {
         int[] houses =  {2,7,9,3,1};
 

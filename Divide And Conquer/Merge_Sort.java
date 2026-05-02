@@ -10,6 +10,7 @@ public class Merge_Sort {
         if(si >= ei){
             return;
         }
+        
         int mid = si + (ei-si) /2;
 
         mergeSort(arr, si, mid); //for left part
