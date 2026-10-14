@@ -240,8 +240,7 @@ public class AVLTree {
         tree.postorder(tree.root);
 
         int key = 25;
-        System.out.println("\n\nSearch " + key + ": "
-                + tree.search(tree.root, key));
+        System.out.println("\n\nSearch " + key + ": " + tree.search(tree.root, key));
 
         tree.root = tree.delete(tree.root, 40);
 

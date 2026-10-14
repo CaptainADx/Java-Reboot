@@ -1,4 +1,4 @@
-package PalindromePair;
+package PalindromePairs;
 
 public class TrieNode {
     char data;

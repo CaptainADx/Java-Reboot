@@ -84,14 +84,34 @@ class AVLTrees {
         return root;   //Return if AVL Balanced
     }
 
+    //Part - 7
+    // Right rotation
+    Node rightRotate(Node y) {
+        Node x = y.left;
+        Node T2 = x.right;
 
-    //Part -7
+        x.right = y;
+        y.left = T2;
 
-    public static Node leftRotate(Node x){
+        y.height = 1 + Math.max(height(y.left), height(y.right));
+        x.height = 1 + Math.max(height(x.left), height(x.right));
+
+        return x;
+    }
+
+    //Part - 8
+    // Left rotation
+    Node leftRotate(Node x) {
         Node y = x.right;
-        Node t2 = y.left;
+        Node T2 = y.left;
 
-        
+        y.left = x;
+        x.right = T2;
+
+        x.height = 1 + Math.max(height(x.left), height(x.right));
+        y.height = 1 + Math.max(height(y.left), height(y.right));
+
+        return y;
     }
 
     //Part - 4

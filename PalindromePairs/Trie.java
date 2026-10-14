@@ -1,10 +1,11 @@
-package PalindromePair;
+package PalindromePairs;
 
 public class Trie {
 
     TrieNode root;
     int numberOfWords;
     
+    @SuppressWarnings("unused")
     Trie(){
         root = new TrieNode('\0');
         numberOfWords = 0;
@@ -39,6 +40,10 @@ public class Trie {
 
     //==================Search In Trie====================
     private boolean searchHelper(TrieNode root, String word){
+        if(root.isTerminal && word.length() > 0){
+            return isPalindrome(word);
+        }
+
         if(word.length() == 0){
             return root.isTerminal;
         }
@@ -57,5 +62,14 @@ public class Trie {
         return searchHelper(root, word);
     }
 
+
+    private boolean isPalindrome(String word){
+        for(int i=0, j=word.length()-1; i<j; i++, j--){
+            if(word.charAt(i) != word.charAt(j)){
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
